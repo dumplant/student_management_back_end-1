@@ -23,16 +23,5 @@ public class MenuController {
     public Set<Menu> getMenuList(@RequestHeader("Authorization") String authHeader) {
         String token = authHeader.substring(7);
         return menuService.getMenu(jwtTokenUtil.getUsernameFromToken(token));
-        //List<Menu> menuList = new ArrayList<>();
-        //
-        //// 数据库实例化
-        //Menu menu1 = new Menu("Home", "/", "HomeComponent");
-        //Menu menu2 = new Menu("About", "/about", "AboutComponent");
-        //Menu menu3 = new Menu("Contact", "/contact", "ContactComponent");
-        //
-        //menuList.add(menu1);
-        //menuList.add(menu2);
-        //menuList.add(menu3);
-        //return menuList;
     }
 }

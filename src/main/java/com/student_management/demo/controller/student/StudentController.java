@@ -31,7 +31,7 @@ public class StudentController {
     private JwtTokenUtil jwtTokenUtil;
 
     /**
-     * 上传GPA excel表格
+     * 上传学生信息 excel表格
      * @param file
      * @throws IOException
      */
