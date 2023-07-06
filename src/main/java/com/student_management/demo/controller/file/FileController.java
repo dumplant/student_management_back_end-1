@@ -7,6 +7,7 @@ import com.student_management.demo.service.file.FileService;
 import com.student_management.demo.service.redis.RedisService;
 import com.student_management.demo.utils.token.JwtTokenUtil;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/api")
+@Slf4j
 public class FileController {
     @Resource
     private FileService fileService;

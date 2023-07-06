@@ -1,6 +1,7 @@
 package com.student_management.demo.service.file;
 
 import com.student_management.demo.common.CommonResult;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mock.web.MockMultipartFile;
@@ -22,6 +23,7 @@ import java.util.UUID;
 import static com.student_management.demo.common.error.ErrorCodeConstants.*;
 import static com.student_management.demo.utils.exception.ServiceExceptionUtil.exception;
 @Service("File")
+@Slf4j
 public class FileServiceImpl implements FileService {
     @Value("${file.upload-path}")
     private String uploadPath;
@@ -262,6 +264,8 @@ public class FileServiceImpl implements FileService {
 
         } catch (IOException e) {
             e.printStackTrace();
+            //写入日志文件
+
             throw exception(ERROR_SUBJECT_FILE);
         }
     }

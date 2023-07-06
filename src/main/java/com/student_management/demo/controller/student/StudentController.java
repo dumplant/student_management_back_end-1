@@ -11,6 +11,7 @@ import com.student_management.demo.service.student.StudentService;
 import com.student_management.demo.utils.excel.ExcelUtils;
 import com.student_management.demo.utils.token.JwtTokenUtil;
 import io.swagger.annotations.Api;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/stu/")
 @Api(tags = "学工导入学生信息")
+@Slf4j
 public class StudentController {
 
     @Resource
