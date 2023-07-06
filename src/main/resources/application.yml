@@ -1,5 +1,6 @@
 server:
   port: 18080
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 mybatis-plus:
@@ -14,7 +15,7 @@ jwt:
     expiration: 10800000
 file:
 #  windows本地，文件在项目根目录的files文件夹下，请根据自己的项目路径修改
-  upload-path: D:\pku_lessons\agile_development\student_scholarship\student_management_back_end\files
+  upload-path: files
   allowed-types: pdf
   max-size: 10485760   # 10MB
 spring:
@@ -22,11 +23,15 @@ spring:
     multipart:
       max-file-size: 10MB
       enabled: true
+#        #指定上传文件临时目录
+#      location: /www/wwwroot/8.130.96.75
   redis:
     host: 127.0.0.1
     port: 6379
-    password: 123456
-#    password: jK7-iT3.rV8!vQ7=eR7=sE7]rC3%e  #(如果有密码的话)
+#    windows本地
+#    password: 123456
+#    服务器
+    password: bQ8jV4wX1zN3aT0
 #  数据库连接,连接到阿里云服务器上的数据库
   datasource:
     url: jdbc:mysql://39.101.65.178:3306/stu_mgmt

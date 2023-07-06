@@ -14,6 +14,7 @@ import com.student_management.demo.service.user.UserBasicService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Parameter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +26,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/service/")
 @Api(tags = "骨干服务表相关接口")
+@Slf4j
 public class ServiceController {
 
     @Resource

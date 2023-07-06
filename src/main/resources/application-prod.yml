@@ -1,0 +1,10 @@
+# ???????linux
+spring:
+    servlet:
+        multipart:
+            #??????????
+            location: /www/wwwroot/8.130.96.75
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        password: bQ8jV4wX1zN3aT0
